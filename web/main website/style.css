@@ -1,0 +1,165 @@
+@font-face {
+     font-family: "JetBrainsMono-ExtraBold";
+     src: url("./lib/fonts/JetBrainsMono-ExtraBold.ttf");
+ }
+
+ :root {
+    --twitch-color: #ffffffd8;
+    --spotify-color: #ffffffd8;
+    --instagram-color: #ffffffd8;
+    --twitter-color: #ffffffd8;
+    --youtube-color: #ffffffd8;
+    --discord-color: #ffffffd8;
+ }
+ 
+ body {
+     overflow: hidden; /* Hide scrollbars */
+     background-color: black;
+     text-align: center;
+     background:url('poopy.gif') repeat-y 100% 100% fixed;
+     height:100%;
+     width:100%;
+ }
+
+ #year {
+    color: aliceblue;
+    font-family: "JetBrainsMono-ExtraBold";
+ }
+
+ .year {
+    text-align: left;
+    width: 50%;
+    top: 100%;
+    font-size: small;
+    text-align: center;
+    top: 3%;
+    position: absolute;
+
+}
+
+ #center-text {
+     color: aliceblue;
+     font-family: "JetBrainsMono-ExtraBold";
+ }
+
+ .centered {
+     text-align: center;
+     margin: auto;
+     width: 100%;
+     position: absolute;
+     top: 80%;
+     -ms-transform: translateY(-50%);
+     transform: translateY(-50%);
+     font-size: xx-large;
+ }
+ 
+
+ .twitch {
+    font-size: xx-large;
+    font-family: "JetBrainsMono-ExtraBold";
+    color: var(--twitch-color);
+    width: 100%;
+    text-align: center;
+    top: 0%;
+    position: absolute;
+ }
+
+
+.twitter {
+    font-size: xx-large;
+    font-family: "JetBrainsMono-ExtraBold";
+    color: #00008B;
+    width: 100%;
+    top: 5%;
+    position: absolute;
+}
+
+
+.spotify {
+    font-size: xx-large;
+    font-family: "JetBrainsMono-ExtraBold";
+    color: #5adb5a;
+    width: 100%;
+    top: 10%;
+    position: absolute;
+}
+
+.instagram {
+    font-size: xx-large;
+    font-family: "JetBrainsMono-ExtraBold";
+    color: #c79d6e;
+    width: 100%;
+    top: 15%;
+    position: absolute;
+}
+
+.youtube {
+    font-size: xx-large;
+    font-family: "JetBrainsMono-ExtraBold";
+    color: #c79d6e;
+    width: 100%;
+    top: 20%;
+    position: absolute;
+}
+
+.discord {
+    font-size: xx-large;
+    font-family: "JetBrainsMono-ExtraBold";
+    color: #c79d6e;
+    width: 100%;
+    top: 25%;
+    position: absolute;
+}
+ 
+ #particles-js {
+     height: 100%;
+     width: 100%;
+     position: fixed;
+     z-index: -100;
+ }
+
+
+a.twitter-class {color:var(--twitter-color);}
+a.twitter-class:link  {text-decoration: none; color: var(--spotify-color);}
+a.twitter-class:visited {text-decoration: none; color: var(--twitter-color);}
+a.twitter-class:hover {text-decoration: underline; color: var(--twitter-color);}
+a.twitter-class:active {text-decoration: none; color: var(--twitter-color);}
+
+a.twitch-class {color:var(--twitch-color);}
+a.twitch-class:link {text-decoration: none; color: var(--twitch-color);}
+a.twitch-class:visited {text-decoration: none; color: var(--twitch-color);}
+a.twitch-class:hover {text-decoration: underline; color: var(--twitch-color);}
+a.twitch-class:active {text-decoration: none; color: var(--twitch-color);}
+
+a.spotify-class {color:var(--spotify-color);}
+a.spotify-class:link {text-decoration: none; color: var(--spotify-color);}
+a.spotify-class:visited {text-decoration: none; color: var(--spotify-color);}
+a.spotify-class:hover {text-decoration: underline; color: var(--spotify-color);}
+a.spotify-class:active {text-decoration: none; color: var(--spotify-color);}
+
+a.youtube-class {color:var(--youtube-color);}
+a.youtube-class:link {text-decoration: none; color: var(--youtube-color);}
+a.youtube-class:visited {text-decoration: none; color: var(--youtube-color);}
+a.youtube-class:hover {text-decoration: underline; color: var(--youtube-color);}
+a.youtube-class:active {text-decoration: none; color: var(--youtube-color);}
+
+a.instagram-class {color:var(--instagram-color);}
+a.instagram-class:link {text-decoration: none; color: var(--instagram-color);}
+a.instagram-class:visited {text-decoration: none; color: var(--instagram-color);}
+a.instagram-class:hover {text-decoration: underline; color: var(--instagram-color);}
+a.instagram-class:active {text-decoration: none; color: var(--instagram-color);}
+a.instagram-class:active {text-decoration: none; color: var(--instagram-color);}
+
+a.discord-class {color:var(--discord-color);}
+a.discord-class:link {text-decoration: none; color: var(--discord-color);}
+a.discord-class:visited {text-decoration: none; color: var(--discord-color);}
+a.discord-class:hover {text-decoration: underline; color: var(--discord-color);}
+a.discord-class:active {text-decoration: none; color: var(--discord-color);}
+a.discord-class:active {text-decoration: none; color: var(--discord-color);}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none; 
+  color: silver;
+}

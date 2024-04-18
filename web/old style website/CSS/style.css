@@ -1,123 +1,24 @@
-@font-face {
-     font-family: "RobotoMono-Bold";
-     src: url("./lib/fonts/RobotoMono-Bold.ttf");
+
+
+body {
+    background-color: #2d3f3c;
+    
+    font-family: "Nanum Gothic Coding";
+    }
+  
+  header {
+    background-color: rgb(45, 63, 60);
+  }
+
+  :root {
+    --twitch-color: #f8f675a1;
+    --spotify-color: #f8f675a1;
+    --instagram-color: #f8f675a1;
+    --twitter-color: #f8f675a1;
+    --youtube-color: #f8f675a1;
+    --discord-color: #f8f675a1;
+    --github-color: #f8f675a1;
  }
-
- :root {
-    --twitch-color: #ffffffd8;
-    --spotify-color: #ffffffd8;
-    --instagram-color: #ffffffd8;
-    --twitter-color: #ffffffd8;
-    --youtube-color: #ffffffd8;
-    --discord-color: #ffffffd8;
- }
- 
- body {
-     overflow: hidden; /* Hide scrollbars */
-     background-color: black;
-     text-align: center;
-     background:url('poopy.gif') repeat-y 100% 100% fixed;
-     height:100%;
-     width:100%;
- }
-
- #year {
-    color: aliceblue;
-    font-family: "RobotoMono-Bold";
- }
-
- .year {
-    text-align: left;
-    width: 50%;
-    top: 100%;
-    font-size: small;
-    text-align: center;
-    top: 3%;
-    position: absolute;
-
-}
-
- #center-text {
-     color: aliceblue;
-     font-family: "RobotoMono-Bold";
- }
-
- .centered {
-     text-align: center;
-     margin: auto;
-     width: 100%;
-     position: absolute;
-     top: 80%;
-     -ms-transform: translateY(-50%);
-     transform: translateY(-50%);
-     font-size: xx-large;
- }
- 
-
- .twitch {
-    font-size: xx-large;
-    font-family: "RobotoMono-Bold";
-    color: var(--twitch-color);
-    width: 100%;
-    text-align: center;
-    top: 0%;
-    position: absolute;
- }
-
-
-.twitter {
-    font-size: xx-large;
-    font-family: "RobotoMono-Bold";
-    color: #00008B;
-    width: 100%;
-    top: 5%;
-    position: absolute;
-}
-
-
-.spotify {
-    font-size: xx-large;
-    font-family: "RobotoMono-Bold";
-    color: #5adb5a;
-    width: 100%;
-    top: 10%;
-    position: absolute;
-}
-
-.instagram {
-    font-size: xx-large;
-    font-family: "RobotoMono-Bold";
-    color: #c79d6e;
-    width: 100%;
-    top: 15%;
-    position: absolute;
-}
-
-.youtube {
-    font-size: xx-large;
-    font-family: "RobotoMono-Bold";
-    color: #c79d6e;
-    width: 100%;
-    top: 20%;
-    position: absolute;
-}
-
-.discord {
-    font-size: xx-large;
-    font-family: "RobotoMono-Bold";
-    color: #c79d6e;
-    width: 100%;
-    top: 25%;
-    position: absolute;
-}
- 
- #particles-js {
-     height: 100%;
-     width: 100%;
-     position: fixed;
-     z-index: -100;
- }
-
 
 a.twitter-class {color:var(--twitter-color);}
 a.twitter-class:link  {text-decoration: none; color: var(--spotify-color);}
@@ -156,6 +57,13 @@ a.discord-class:visited {text-decoration: none; color: var(--discord-color);}
 a.discord-class:hover {text-decoration: underline; color: var(--discord-color);}
 a.discord-class:active {text-decoration: none; color: var(--discord-color);}
 a.discord-class:active {text-decoration: none; color: var(--discord-color);}
+
+a.github-class {color:var(--github-color);}
+a.github-class:link {text-decoration: none; color: var(--github-color);}
+a.github-class:visited {text-decoration: none; color: var(--github-color);}
+a.github-class:hover {text-decoration: underline; color: var(--github-color);}
+a.github-class:active {text-decoration: none; color: var(--github-color);}
+a.github-class:active {text-decoration: none; color: var(--github-color);}
 a:link,
 a:visited,
 a:hover,
@@ -163,3 +71,4 @@ a:active {
   text-decoration: none; 
   color: silver;
 }
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,   initial-scale=1.0">
+    <title>flpd 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="toggle-container">
+        <button id="darkModeToggle">Lower Transperancy</button>
+    </div>
+    
+    <div class="container">
+        <h1>flpd</h1>
+        <p>main hub</p>
+    </div>
+
+    <div class="container">
+        <h1>soundcloud</h1>
+        <p>latest release</p>
+        <a href="https://soundcloud.com/flpd/mishicot" class="soundcloud-class">listen</a>
+    </div>
+
+    <!-- <a href="portfolio.html" class="container-link">
+        <div class="container">
+            <h1>even more links</h1>
+            <p>git/linkedin</p>
+            <span class="discord-class">view</span>
+        </div>
+    </a> -->
+    
+
+    <audio id="myAudio" autoplay loop>
+        <source src="noct20.mp3" type="audio/mpeg">
+    </audio>
+    <div class="copyright">© 2025 flpd.xyz (Light Mode)</div>
+
+
+    <script>
+        var audio = document.getElementById("myAudio");
+        var darkModeToggle = document.getElementById("darkModeToggle");
+        var body = document.body;
+        var copyright = document.querySelector(".copyright");
+
+        function setVolume(volume) {
+            if (volume >= 0 && volume <= 1) {
+                audio.volume = volume;
+            }
+        }
+
+        setVolume(0.05); 
+
+        darkModeToggle.addEventListener("click", function() {
+            body.classList.toggle("dark-mode");
+            if (body.classList.contains("dark-mode")) {
+                copyright.textContent = "© 2025 flpd.xyz (Dark Mode)";
+            } else {
+                copyright.textContent = "© 2025 flpd.xyz (Light Mode)";
+            }
+        });
+    </script>
+</body>
+</html>

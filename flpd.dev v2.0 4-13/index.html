@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,   initial-scale=1.0">
-    <title>flpd 2025</title>
+    <title>flpd.xyz</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
@@ -11,33 +11,43 @@
 </head>
 <body>
     <div class="toggle-container">
-        <button id="darkModeToggle">Lower Transperancy</button>
+        <button id="darkModeToggle">Transperancy</button>
     </div>
     
     <div class="container">
-        <h1>flpd</h1>
-        <p>main hub</p>
+        <h1>Gage</h1>
+        <p>Main hub</p>
     </div>
 
     <div class="container">
-        <h1>soundcloud</h1>
-        <p>latest release</p>
-        <a href="https://soundcloud.com/flpd/mishicot" class="soundcloud-class">listen</a>
+        <h1>My code.</h1>
+        <p>If all you want to see is the code I write, here.</p>
+        <a href="https://github.com/gageyandle" class="soundcloud-class">View</a>
     </div>
 
-    <!-- <a href="portfolio.html" class="container-link">
-        <div class="container">
-            <h1>even more links</h1>
-            <p>git/linkedin</p>
-            <span class="discord-class">view</span>
-        </div>
-    </a> -->
+    <div class="container">
+        <h1>Links / Showcase / Bio</h1>
+        <p>git/linkedin</p>
+        <a href="portfolio.html" class="container-link">
+            <span class="discord-class">View</span>
+        </a>
+    </div> --> fix pls
     
+    <!-- need to fix this to redirect to the next page as a button and
+     not as a whole underlined hyperlink--> FIXED
 
     <audio id="myAudio" autoplay loop>
         <source src="noct20.mp3" type="audio/mpeg">
     </audio>
-    <div class="copyright">© 2025 flpd.xyz (Light Mode)</div>
+    <div class="copyright">gage 2025</div>
+
+    <div class="container">
+        <h1>Contact Me</h1>
+        <p>Questions or Requests</p>
+        <a href="contact.html" class="container-link">
+            <span class="discord-class">View</span>
+        </a>
+    </div>
 
 
     <script>
@@ -56,10 +66,10 @@
 
         darkModeToggle.addEventListener("click", function() {
             body.classList.toggle("dark-mode");
-            if (body.classList.contains("dark-mode")) {
-                copyright.textContent = "© 2025 flpd.xyz (Dark Mode)";
+            if (body.classList.contains("easter egg")) {
+                copyright.textContent = "© 2025 flpd.xyz (easter egg)";
             } else {
-                copyright.textContent = "© 2025 flpd.xyz (Light Mode)";
+                copyright.textContent = "© 2025 flpd.xyz";
             }
         });
     </script>

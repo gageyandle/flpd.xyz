@@ -2,10 +2,340 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,   initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flpd 2025</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #0f0f0f;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0 40px;
+            margin-top: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Bio Section */
+        .bio-section {
+            background-color: #181818;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 5px;
+        }
+
+        .bio-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Social Links Section */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .social-link {
+            display: block;
+            width: 48%;
+            max-width: 350px;
+            padding: 25px 30px;
+            background-color: #181818;
+            border-radius: 5px;
+            color: #e0e0e0;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: #252525;
+            transform: translateY(-3px);
+        }
+
+        .social-link h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .social-link p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Carousel Section */
+        .carousel-section {
+            margin-bottom: 40px;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            background-color: #222;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-bottom: 20px;
+        }
+
+        .carousel-image {
+            width: 100%;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .carousel-description {
+            padding: 20px;
+            max-width: 90%;
+            text-align: center;
+        }
+
+        .carousel-description h3 {
+            margin-bottom: 10px;
+            color: #e0e0e0;
+        }
+
+        .carousel-description p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .carousel-button {
+            background: none;
+            border: 2px solid #555;
+            color: #e0e0e0;
+            padding: 8px 16px;
+            margin: 0 5px;
+            cursor: pointer;
+            font-family: 'JetBrains Mono', monospace;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-button:hover {
+            background-color: #333;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: #555;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #e0e0e0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 40px;
+        }
+    </style>
 </head>
+<body>
+    <div class="container">
+        <header>
+            <h1>flpd 2025</h1>
+        </header>
+
+        <section class="bio-section">
+            <div class="bio-content">
+                <h2>Me.</h2>
+                <!-- Replace this with your actual bio content -->
+              <p>Welcome to my personal space. I'm a creative professional specializing in design and development. This is where I showcase my work and share my thoughts on various projects I'm working on.</p>
+                <p></p>
+            </div>
+        </section>
+
+        <!-- Social Links Section -->
+        <div class="social-links">
+            <a href="https://github.com/gageyandle" class="social-link" target="_blank">
+                <h3>GitHub</h3>
+                <p>Check out my code repositories</p>
+            </a>
+            <a href="https://www.linkedin.com/in/gagey/" class="social-link" target="_blank">
+                <h3>LinkedIn</h3>
+                <p>Connect with me professionally</p>
+            </a>
+        </div>
+
+        <section class="carousel-section">
+            <h2>Portfolio</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <div class="carousel-image">
+                            <img src="image1.jpg" alt="Project 1">
+                        </div>
+                        <div class="carousel-description">
+                            <h3>First Website</h3>
+                            <p>Ascci style file storage 2000's style.</p>
+                            <p>Pretty much as simple as it gets, the hello world of websites.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-image">
+                            <img src="image2.jpg" alt="Project 2">
+                        </div>
+                        <div class="carousel-description">
+                            <h3>Holiday Website.</h3>
+                            <p>Christmas lights made in css for the holidays, still a basic website.</p>
+                            <p>Mainly a css showcase and something quirky for the holidays.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-image">
+                            <img src="image3.jpg" alt="Project 3">
+                        </div>
+                        <div class="carousel-description">
+                            <h3>Where we are now.</h3>
+                            <p>Not everything I know is showcased here but enough to get the point across.</p>
+                            <p>I learned how to add a background, mess with the background and other things behind the scenes.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-image">
+                            <img src="image4.jpg" alt="Project 4">
+                        </div>
+                        <div class="carousel-description">
+                            <h3>Showcase.</h3>
+                            <p>Will be updated with what I am working on.</p>
+                            <p>Kind of silly to put what you're looking at here, but it's something I'm proud of.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+            </div>
+            <div class="carousel-nav">
+                <button class="carousel-button prev-button">Prev</button>
+                <button class="carousel-button next-button">Next</button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 flpd.xyz</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.carousel');
+            const items = document.querySelectorAll('.carousel-item');
+            const dots = document.querySelectorAll('.dot');
+            const prevButton = document.querySelector('.prev-button');
+            const nextButton = document.querySelector('.next-button');
+            
+            let currentIndex = 0;
+            const totalItems = items.length;
+            
+            // Initialize
+            updateCarousel();
+            
+            // Event listeners
+            prevButton.addEventListener('click', function() {
+                currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+                updateCarousel();
+            });
+            
+            nextButton.addEventListener('click', function() {
+                currentIndex = (currentIndex + 1) % totalItems;
+                updateCarousel();
+            });
+            
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    currentIndex = parseInt(this.getAttribute('data-index'));
+                    updateCarousel();
+                });
+            });
+            
+            // Update carousel position and active dot
+            function updateCarousel() {
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                dots.forEach((dot, index) => {
+                    if (index === currentIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Auto-advance carousel every 10 seconds
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % totalItems;
+                updateCarousel();
+            }, 10000);
+        });
+    </script>
+</body>
+</html>

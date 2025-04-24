@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - flpd 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #0f0f0f;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0 40px;
+            margin-top: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        /* Contact Form Section */
+        .contact-section {
+            background-color: #181818;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 5px;
+        }
+
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-intro h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            background-color: #252525;
+            border: 1px solid #333;
+            border-radius: 4px;
+            color: #e0e0e0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #555;
+        }
+
+        textarea.form-input {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #252525;
+            border: 2px solid #333;
+            color: #e0e0e0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #333;
+            transform: translateY(-2px);
+        }
+
+        .form-buttons {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Return Link */
+        .return-link {
+            display: block;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .return-link:hover {
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 40px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>flpd 2025</h1>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="contact.html" style="color: #fff;">Contact</a>
+        </nav>
+
+        <section class="contact-section">
+            <div class="contact-intro">
+                <h2>Contact Me</h2>
+                <p>Have a question or want to work together? Fill out the form below.</p>
+            </div>
+            
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="d72b2cce-ad25-497d-977b-e9e6772e7ceb">
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="form-input" required></textarea>
+                </div>
+                
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden">
+                
+               
+                <input type="hidden" name="redirect" value="thanks.html">
+                
+                <div class="form-buttons">
+                    <button type="submit" class="submit-button">Send Message</button>
+                </div>
+            </form>
+        </section>
+
+        <a href="index.html" class="return-link">← Return to Homepage</a>
+    </div>
+
+    <footer>
+        <p>© 2025 flpd.xyz</p>
+    </footer>
+</body>
+</html>

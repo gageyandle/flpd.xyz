@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Gage 2025</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+    <style>
+        /* Hamburger Menu Styles */
+        .menu-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+        
+        .hamburger {
+            display: block;
+            width: 30px;
+            height: 25px;
+            position: relative;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            padding: 0;
+        }
+        
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+        
+        .hamburger span:nth-child(1) {
+            top: 0px;
+        }
+        
+        .hamburger span:nth-child(2) {
+            top: 10px;
+        }
+        
+        .hamburger span:nth-child(3) {
+            top: 20px;
+        }
+        
+        /* When menu is open */
+        .hamburger.open span:nth-child(1) {
+            top: 10px;
+            transform: rotate(135deg);
+        }
+        
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+            left: -60px;
+        }
+        
+        .hamburger.open span:nth-child(3) {
+            top: 10px;
+            transform: rotate(-135deg);
+        }
+        
+        /* Side Navigation Menu */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.85);
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+        
+        .sidenav a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #ffffff;
+            display: block;
+            transition: 0.3s;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .sidenav a:hover {
+            color: #868686;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hamburger Menu -->
+    <div class="menu-container">
+        <button class="hamburger" id="menuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    
+    <!-- Side Navigation -->
+    <div id="mySidenav" class="sidenav">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    
+    <!-- <div class="toggle-container">
+        <button id="darkModeToggle">Blur Background</button>
+    </div> -->
+   
+    <div class="container">
+        <h1>Gage</h1>
+        <p>Home</p>
+    </div>
+    <div class="container">
+        <h1>Contact Me</h1>
+        <p>Questions or Requests</p>
+        <a href="contact.html" class="container-link">
+            <span class="discord-class">View</span>
+        </a>
+    </div>
+   
+    <div class="container">
+        <h1>My code.</h1>
+        <p>If all you want to see is the code I write, here.</p>
+        <a href="https://github.com/gageyandle" class="soundcloud-class">View</a>
+    </div>
+    <div class="container">
+        <h1>Links / Showcase / Bio</h1>
+        <p>git/linkedin</p>
+        <a href="portfolio.html" class="container-link">
+            <span class="discord-class">View</span>
+        </a>
+    </div>
+   
+    <audio id="myAudio" autoplay loop>
+        <source src="noct20.mp3" type="audio/mpeg">
+    </audio>
+    <div class="copyright">Gage 2025</div>
+ 
+    <script>
+        // Audio controls
+        // var audio = document.getElementById("myAudio");
+        // var darkModeToggle = document.getElementById("darkModeToggle");
+        // var body = document.body;
+        // var copyright = document.querySelector(".copyright");
+        
+        // function setVolume(volume) {
+        //     if (volume >= 0 && volume <= 1) {
+        //         audio.volume = volume;
+        //     }
+        // }
+        // setVolume(0.05); // fix later so it plays on the whole site
+        
+        // darkModeToggle.addEventListener("click", function() {
+        //     body.classList.toggle("dark-mode");
+        //     if (body.classList.contains("easter egg")) {
+        //         copyright.textContent = "© 2025 flpd.xyz (easter egg)";
+        //     } else {
+        //         copyright.textContent = "© 2025 flpd.xyz";
+        //     }
+        // });
+        
+        //hamburber menu control
+        const menuBtn = document.getElementById("menuBtn");
+        const sidenav = document.getElementById("mySidenav");
+        
+        menuBtn.addEventListener("click", function() {
+            this.classList.toggle("open");
+            if (this.classList.contains("open")) {
+                sidenav.style.width = "170px";
+            } else {
+                sidenav.style.width = "0";
+            }
+        });
+    </script>
+</body>
+</html>

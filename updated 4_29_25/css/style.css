@@ -3,7 +3,7 @@ body {
   font-weight: 300;
   font-style: normal;
   background-color: #f0f0f0;
-  background-image: url('../images/bg.jpg'); /* Add this line */
+  background-image: url('../images/bg.jpg'); 
   background-size: cover;          /* Ensures it covers the whole background */
   background-position: center;     /* Center the image */
   background-repeat: no-repeat;    /* Prevent tiling */

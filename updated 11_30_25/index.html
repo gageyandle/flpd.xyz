@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+    <ul class="lights">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+<head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Gage 2025</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+  box-sizing: border-box;
+  margin: 10;
+  padding: 0;
+}
+
+body {
+  background-color: #efefef;
+}
+
+.lights {
+  --color-1: 107, 209, 177;
+  --color-2: 207, 86, 86;
+  --color-3: 226, 221, 84;
+  display: flex;
+  justify-content: center;
+  gap: 30px 40px;
+  padding: 30px 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.lights li {
+  flex: none;
+  position: relative;
+  list-style: none;
+  width: 15px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.lights li:before {
+  position: absolute;
+  content: "";
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #222;
+  border-radius: 100%;
+}
+
+.lights li:after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  top: -2px;
+  left: 50%;
+  width: 54px;
+  height: 5px;
+  border-bottom: 1px solid #222;
+  border-radius: 100%;
+}
+
+.lights li:last-child:after {
+  display: none;
+}
+
+.lights li {
+  background-color: rgba(var(--color-1), 1);
+  box-shadow: 0 5px 24px 3px rgba(var(--color-1), 1);
+  animation: lighting-1 1.25s infinite linear;
+}
+
+@keyframes lighting-1 {
+  50% {
+    background-color: rgba(var(--color-1), 0.25);
+    box-shadow: 0 5px 24px 3px rgba(var(--color-1), 0.25);
+  }
+}
+
+.lights li:nth-child(odd) {
+  /* 1, 3, 5, ... */
+  background-color: rgba(var(--color-2), 1);
+  box-shadow: 0 5px 24px 3px rgba(var(--color-2), 0.8);
+  animation: lighting-2 1.5s infinite linear;
+}
+
+@keyframes lighting-2 {
+  50% {
+    background-color: rgba(var(--color-2), 0.4);
+    box-shadow: 0 5px 24px 3px rgba(var(--color-2), 0.3);
+  }
+}
+
+.lights li:nth-child(4n + 2) {
+  /* 2, 6, 10, 14, ... */
+  background-color: rgba(var(--color-3), 1);
+  box-shadow: 0 5px 24px 3px rgba(var(--color-3), 1);
+  animation: lighting-3 1.5s infinite linear;
+  animation-delay: 1.25s;
+}
+
+@keyframes lighting-3 {
+  50% {
+    background-color: rgba(var(--color-3), 0.25);
+    box-shadow: 0 5px 24px 3px rgba(var(--color-3), 0.25);
+  }
+}
+        /* Hamburger Menu Styles */
+        .menu-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+        
+        .hamburger {
+            display: block;
+            width: 30px;
+            height: 25px;
+            position: relative;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            padding: 0;
+        }
+        
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+        
+        .hamburger span:nth-child(1) {
+            top: 0px;
+        }
+        
+        .hamburger span:nth-child(2) {
+            top: 10px;
+        }
+        
+        .hamburger span:nth-child(3) {
+            top: 20px;
+        }
+        
+        /* When menu is open */
+        .hamburger.open span:nth-child(1) {
+            top: 10px;
+            transform: rotate(135deg);
+        }
+        
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+            left: -60px;
+        }
+        
+        .hamburger.open span:nth-child(3) {
+            top: 10px;
+            transform: rotate(-135deg);
+        }
+        
+        /* Side Navigation Menu */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            background-color: #b1b1b1d9;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+        
+        .sidenav a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #ffffff;
+            display: block;
+            transition: 0.3s;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .sidenav a:hover {
+            color: #2b2b2b;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hamburger Menu -->
+    <div class="menu-container">
+        <button class="hamburger" id="menuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    
+    <!-- Side Navigation -->
+    <div id="mySidenav" class="sidenav">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    
+    <!-- <div class="toggle-container">
+        <button id="darkModeToggle">Blur Background</button>
+    </div> -->
+   
+    <div class="container">
+        <h1>Gage</h1>
+        <p>Home</p>
+    </div>
+    <div class="container">
+        <h1>Contact Me</h1>
+        <p>Questions or Requests</p>
+        <a href="contact.html" class="container-link">
+            <span class="discord-class">View</span>
+        </a>
+    </div>
+   
+    <div class="container">
+        <h1>My code.</h1>
+        <p>If all you want to see is the code I write, here.</p>
+        <a href="https://github.com/gageyandle" class="soundcloud-class">View</a>
+    </div>
+    <div class="container">
+        <h1>Links / Showcase / Bio</h1>
+        <p>git/linkedin</p>
+        <a href="portfolio.html" class="container-link">
+            <span class="discord-class">View</span>
+        </a>
+    </div>
+   
+    <audio id="myAudio" autoplay loop>
+        <source src="noct20.mp3" type="audio/mpeg">
+    </audio>
+    <div class="copyright">Gage 2025</div>
+ 
+    <script>
+        // Audio controls
+        // var audio = document.getElementById("myAudio");
+        // var darkModeToggle = document.getElementById("darkModeToggle");
+        // var body = document.body;
+        // var copyright = document.querySelector(".copyright");
+        
+        // function setVolume(volume) {
+        //     if (volume >= 0 && volume <= 1) {
+        //         audio.volume = volume;
+        //     }
+        // }
+        // setVolume(0.05); // fix later so it plays on the whole site
+        
+        // darkModeToggle.addEventListener("click", function() {
+        //     body.classList.toggle("dark-mode");
+        //     if (body.classList.contains("easter egg")) {
+        //         copyright.textContent = "© 2025 flpd.xyz (easter egg)";
+        //     } else {
+        //         copyright.textContent = "© 2025 flpd.xyz";
+        //     }
+        // });
+        
+        //hamburber menu control
+        const menuBtn = document.getElementById("menuBtn");
+        const sidenav = document.getElementById("mySidenav");
+        
+        menuBtn.addEventListener("click", function() {
+            this.classList.toggle("open");
+            if (this.classList.contains("open")) {
+                sidenav.style.width = "170px";
+            } else {
+                sidenav.style.width = "0";
+            }
+        });
+    </script>
+</body>
+</html>

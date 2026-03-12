@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio / flpd.xyz</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="mesh">
+    <div class="mesh-blob blob1"></div>
+    <div class="mesh-blob blob2"></div>
+    <div class="mesh-blob blob3"></div>
+  </div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">flpd.xyz</a>
+    <ul class="nav-links">
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="page-tag pink">◈ Portfolio</div>
+    <h1>What I <span class="grad-pink">do.</span></h1>
+    <p class="subtitle">An experienced creative specializing in design and development. Here's where I showcase my work.</p>
+
+    <div class="social-row">
+      <a href="https://github.com/gageyandle" class="social-btn" target="_blank" rel="noopener">
+        <span class="social-dot github-dot"></span> GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/gagey/" class="social-btn" target="_blank" rel="noopener">
+        <span class="social-dot linkedin-dot"></span> LinkedIn
+      </a>
+    </div>
+
+    <div class="bio-card">
+      <h2>About me</h2>
+      <p>I build things for the web, from simple landing pages to full-stack projects. Always experimenting, always learning. This site is both a portfolio and a playground.</p>
+    </div>
+
+    <div class="carousel-section">
+      <div class="section-label">Projects</div>
+      <div class="carousel-wrap">
+        <div class="carousel">
+          <div class="carousel-item">
+            <div class="carousel-image"><img src="../images/image1.jpg" alt="First Website"></div>
+            <div class="carousel-desc">
+              <h3>First Website</h3>
+              <p>ASCII style file storage / 2000s aesthetic.</p>
+              <p>The hello world of websites. Simple, but it had to start somewhere.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-image"><img src="../images/image2.jpg" alt="Holiday Website"></div>
+            <div class="carousel-desc">
+              <h3>Holiday Website</h3>
+              <p>Christmas lights built entirely in CSS.</p>
+              <p>A CSS showcase and something quirky for the season.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-image"><img src="../images/image3.jpg" alt="Where We Are Now"></div>
+            <div class="carousel-desc">
+              <h3>Before Now</h3>
+              <p>Backgrounds, blur, Layout changes, and more.</p>
+              <p>A snapshot of how far things have come.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-image"><img src="../images/image4.jpg" alt="Showcase"></div>
+            <div class="carousel-desc">
+              <h3>Showcase</h3>
+              <p>Updated with whatever I'm currently working on.</p>
+              <p>Something I'm proud of even if it's still in progress.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <div class="carousel-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+          </div>
+          <div class="carousel-btns">
+            <button class="carousel-btn prev-btn">← Prev</button>
+            <button class="carousel-btn next-btn">Next →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>flpd.xyz 2026</footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const carousel = document.querySelector('.carousel');
+      const dots = document.querySelectorAll('.dot');
+      const total = document.querySelectorAll('.carousel-item').length;
+      let idx = 0;
+
+      function go(n) {
+        idx = (n + total) % total;
+        carousel.style.transform = `translateX(-${idx * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+      }
+
+      document.querySelector('.prev-btn').addEventListener('click', () => go(idx - 1));
+      document.querySelector('.next-btn').addEventListener('click', () => go(idx + 1));
+      dots.forEach(d => d.addEventListener('click', () => go(+d.dataset.index)));
+      setInterval(() => go(idx + 1), 10000);
+    });
+  </script>
+</body>
+</html>

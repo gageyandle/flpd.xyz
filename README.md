@@ -46,5 +46,5 @@ Each `updated *` folder is a full snapshot of the site at that point in time, ke
 | `updated 03-13-26/` | Mar 13, 2026 |
 | `updated 03-15-26/` | Mar 15, 2026 |
 
-These backup folders are **not** deleted when the live root is updated — they are preserved here as snapshots.
+These are preserved here as snapshots.
 

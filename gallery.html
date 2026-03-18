@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery / flpd.xyz</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">Gage Y.</a>
+    <ul class="nav-links">
+      <button id="dm" onclick="document.body.classList.toggle('dark');localStorage.setItem('dm',document.body.classList.contains('dark'))">◐</button>
+      <li><a href="skills.html">Toolbox</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="page-tag">🖼 gallery</div>
+    <h1>Things I've <span class="grad-teal">built.</span></h1>
+    <p class="subtitle">A visual archive of projects and experiments over time.</p>
+
+    <div class="gallery-grid">
+      <figure class="gallery-item">
+        <img src="images/image1.jpg" alt="First Website">
+        <figcaption>First Website — ASCII style, 2000s aesthetic. The hello world of sites.</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/image2.jpg" alt="Holiday Website">
+        <figcaption>Holiday Website — Christmas lights built entirely in CSS.</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/image3.jpg" alt="Where We Are Now">
+        <figcaption>Where We Are Now — backgrounds, blur, layout, and more.</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/image4.jpg" alt="Showcase">
+        <figcaption>Showcase — whatever I'm currently working on.</figcaption>
+      </figure>
+    </div>
+  </main>
+
+<script>
+  if (localStorage.getItem('dm') === 'true') {
+    document.body.classList.add('dark');
+  }
+</script>
+
+  <footer>flpd.xyz 2026 and Beyond</footer>
+</body>
+</html>

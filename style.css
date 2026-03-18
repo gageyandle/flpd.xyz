@@ -577,7 +577,7 @@ textarea.form-input { min-height: 130px; resize: vertical; }
 }
 
 
-/* dark mode test*/
+/* DARK MODE TOGGLE BUTTON */
 
 #dm {
   background: transparent;
@@ -590,7 +590,94 @@ textarea.form-input { min-height: 130px; resize: vertical; }
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
+/* DARK MODE */
+
 body.dark {
   background: var(--soil);
   color: var(--parch);
+}
+
+body.dark nav {
+  background: rgba(26, 31, 23, 0.92);
+  border-bottom-color: rgba(58, 94, 63, 0.25);
+}
+
+body.dark .nav-logo { color: var(--fern); }
+body.dark .nav-links a { color: var(--stone); }
+body.dark .nav-links a:hover { color: var(--parch); }
+body.dark .nav-links a.active { color: var(--fern); }
+
+body.dark #dm {
+  border-color: rgba(58, 94, 63, 0.35);
+  color: var(--stone);
+}
+
+body.dark .nav-card,
+body.dark .skill-card,
+body.dark .bio-card,
+body.dark .form-card,
+body.dark .carousel-wrap,
+body.dark .gallery-item {
+  background: var(--bark);
+  border-color: rgba(58, 94, 63, 0.25);
+  color: var(--parch);
+}
+
+body.dark .card-title,
+body.dark .skill-name,
+body.dark .bio-card h2,
+body.dark .carousel-desc h3 { color: var(--parch); }
+
+body.dark .card-desc,
+body.dark .skill-desc,
+body.dark .bio-card p,
+body.dark .carousel-desc p,
+body.dark .gallery-item figcaption { color: var(--stone); }
+
+body.dark .card-link { color: var(--fern); }
+
+body.dark .nav-card:hover {
+  border-color: var(--fern);
+  box-shadow: 3px 3px 0 var(--fern);
+}
+
+body.dark .skill-card:hover { border-color: var(--fern); }
+
+body.dark .form-input {
+  background: var(--soil);
+  border-color: rgba(58, 94, 63, 0.35);
+  color: var(--parch);
+}
+
+body.dark .form-input:focus { border-color: var(--fern); }
+body.dark .form-input::placeholder { color: var(--stone); }
+
+body.dark label { color: var(--fern); }
+
+body.dark .submit-btn { background: var(--moss); }
+body.dark .submit-btn:hover { background: var(--fern); }
+
+body.dark .social-btn {
+  border-color: rgba(58, 94, 63, 0.35);
+  color: var(--parch);
+}
+body.dark .social-btn:hover { border-color: var(--fern); color: var(--fern); }
+
+body.dark .carousel-controls { border-top-color: rgba(58, 94, 63, 0.25); }
+body.dark .carousel-btn {
+  border-color: rgba(58, 94, 63, 0.35);
+  color: var(--fern);
+}
+body.dark .carousel-btn:hover { border-color: var(--fern); }
+
+body.dark .dot { background: rgba(122, 158, 95, 0.25); }
+body.dark .dot.active { background: var(--fern); }
+
+body.dark .page-tag { color: var(--stone); }
+
+body.dark .section-label { color: var(--stone); }
+
+body.dark footer {
+  border-top-color: rgba(58, 94, 63, 0.25);
+  color: var(--stone);
 }

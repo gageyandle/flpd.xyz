@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanks / flpd.xyz</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">Gage Y.</a>
+    <ul class="nav-links">
+      <button id="dm" onclick="document.body.classList.toggle('dark');localStorage.setItem('dm',document.body.classList.contains('dark'))">◐</button>
+      <li><a href="skills.html">Toolbox</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="narrow">
+    <div class="page-tag">✉ contact</div>
+    <h1>Message <span class="grad-purple">sent.</span></h1>
+    <p class="subtitle">Thanks for reaching out — I'll get back to you as soon as I can.</p>
+    <a href="index.html" class="hero-cta">Back to Home</a>
+  </main>
+
+<script>
+  if (localStorage.getItem('dm') === 'true') {
+    document.body.classList.add('dark');
+  }
+</script>
+
+  <footer>flpd.xyz 2026 and Beyond</footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+
+body {
+    background-color: #208c71;
+    
+    font-family: "Nanum Gothic Coding";
+    }
+  
+  header {
+    background-color: #208c71;
+  }
+
+  :root {
+    --twitch-color: #0100fe;
+    --spotify-color: #0100fe;
+    --instagram-color: #0100fe;
+    --twitter-color: #0100fe;
+    --youtube-color: #0100fe;
+    --discord-color: #0100fe;
+    --github-color: #0100fe;
+    --marquee-color: #0100fe;
+ }
+
+a.twitter-class {color:var(--twitter-color);}
+a.twitter-class:link  {text-decoration: none; color: var(--spotify-color);}
+a.twitter-class:visited {text-decoration: none; color: var(--twitter-color);}
+a.twitter-class:hover {text-decoration: underline; color: var(--twitter-color);}
+a.twitter-class:active {text-decoration: none; color: var(--twitter-color);}
+
+a.twitch-class {color:var(--twitch-color);}
+a.twitch-class:link {text-decoration: none; color: var(--twitch-color);}
+a.twitch-class:visited {text-decoration: none; color: var(--twitch-color);}
+a.twitch-class:hover {text-decoration: underline; color: var(--twitch-color);}
+a.twitch-class:active {text-decoration: none; color: var(--twitch-color);}
+
+a.spotify-class {color:var(--spotify-color);}
+a.spotify-class:link {text-decoration: none; color: var(--spotify-color);}
+a.spotify-class:visited {text-decoration: none; color: var(--spotify-color);}
+a.spotify-class:hover {text-decoration: underline; color: var(--spotify-color);}
+a.spotify-class:active {text-decoration: none; color: var(--spotify-color);}
+
+a.youtube-class {color:var(--youtube-color);}
+a.youtube-class:link {text-decoration: none; color: var(--youtube-color);}
+a.youtube-class:visited {text-decoration: none; color: var(--youtube-color);}
+a.youtube-class:hover {text-decoration: underline; color: var(--youtube-color);}
+a.youtube-class:active {text-decoration: none; color: var(--youtube-color);}
+
+a.instagram-class {color:var(--instagram-color);}
+a.instagram-class:link {text-decoration: none; color: var(--instagram-color);}
+a.instagram-class:visited {text-decoration: none; color: var(--instagram-color);}
+a.instagram-class:hover {text-decoration: underline; color: var(--instagram-color);}
+a.instagram-class:active {text-decoration: none; color: var(--instagram-color);}
+a.instagram-class:active {text-decoration: none; color: var(--instagram-color);}
+
+a.discord-class {color:var(--discord-color);}
+a.discord-class:link {text-decoration: none; color: var(--discord-color);}
+a.discord-class:visited {text-decoration: none; color: var(--discord-color);}
+a.discord-class:hover {text-decoration: underline; color: var(--discord-color);}
+a.discord-class:active {text-decoration: none; color: var(--discord-color);}
+a.discord-class:active {text-decoration: none; color: var(--discord-color);}
+
+a.github-class {color:var(--github-color);}
+a.github-class:link {text-decoration: none; color: var(--github-color);}
+a.github-class:visited {text-decoration: none; color: var(--github-color);}
+a.github-class:hover {text-decoration: underline; color: var(--github-color);}
+a.github-class:active {text-decoration: none; color: var(--github-color);}
+a.github-class:active {text-decoration: none; color: var(--github-color);}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none; 
+  color: silver;
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated ASCII Smiley Banner</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #000;
+            margin: 0;
+            padding: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            color: #87CEEB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .ascii-banner {
+            text-align: center;
+            font-size: 8px;
+            line-height: 1;
+            white-space: pre;
+            animation: glow 2s ease-in-out infinite alternate;
+            cursor: pointer;
+        }
+        
+        .ascii-art {
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        .eye {
+            animation: blink 3s infinite;
+        }
+        
+        .mouth {
+            animation: smile 4s ease-in-out infinite;
+        }
+        
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #87CEEB, 0 0 10px #87CEEB, 0 0 15px #87CEEB;
+            }
+            100% {
+                text-shadow: 0 0 10px #87CEEB, 0 0 20px #87CEEB, 0 0 30px #87CEEB;
+            }
+        }
+        
+        @keyframes blink {
+            0%, 90%, 100% {
+                opacity: 1;
+            }
+            95% {
+                opacity: 0;
+            }
+        }
+        
+        @keyframes smile {
+            0%, 100% {
+                transform: scaleY(1);
+            }
+            50% {
+                transform: scaleY(1.2);
+            }
+        }
+        
+        .welcome-text {
+            font-size: 14px;
+            margin-top: 20px;
+            animation: typewriter 3s steps(20) 1s forwards;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #87CEEB;
+            width: 0;
+        }
+        
+        @keyframes typewriter {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .ascii-banner {
+                font-size: 6px;
+            }
+            .welcome-text {
+                font-size: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .ascii-banner {
+                font-size: 4px;
+            }
+            .welcome-text {
+                font-size: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ascii-banner" onclick="window.location.href='index.html'">
+        <div class="ascii-art">
+        <span class="eye">██</span>     <span class="eye">██</span>
+        
+
+        <span class="mouth">█████</span>
+        </div>
+        <div class="welcome-text">welcome, click to enter</div>
+    </div>
+
+    <script>
+        // Add some interactive sparkles on click
+        document.querySelector('.ascii-banner').addEventListener('click', function(e) {
+            // Create sparkles but don't prevent navigation
+            createSparkle(e.clientX, e.clientY);
+        });
+        
+        function createSparkle(x, y) {
+            const sparkle = document.createElement('div');
+            sparkle.style.position = 'fixed';
+            sparkle.style.left = x + 'px';
+            sparkle.style.top = y + 'px';
+            sparkle.style.color = '#87CEEB';
+            sparkle.style.fontSize = '12px';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.zIndex = '1000';
+            sparkle.textContent = '*';
+            sparkle.style.animation = 'sparkle 0.8s ease-out forwards';
+            
+            document.body.appendChild(sparkle);
+            
+            // Add sparkle animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes sparkle {
+                    0% {
+                        transform: scale(0) rotate(0deg);
+                        opacity: 1;
+                    }
+                    100% {
+                        transform: scale(1.5) rotate(180deg);
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            setTimeout(() => {
+                document.body.removeChild(sparkle);
+            }, 800);
+        }
+        
+        // Keyboard easter egg
+        let konami = [];
+        const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+        
+        document.addEventListener('keydown', function(e) {
+            konami.push(e.code);
+            if (konami.length > konamiCode.length) {
+                konami.shift();
+            }
+            
+            if (JSON.stringify(konami) === JSON.stringify(konamiCode)) {
+                document.querySelector('.ascii-banner').style.animation = 'none';
+                document.querySelector('.ascii-banner').style.color = '#ff0000';
+                document.querySelector('.ascii-banner').style.textShadow = '0 0 20px #ff0000';
+                document.querySelector('.welcome-text').textContent = 'Konami Code Activated! 🎮';
+            }
+        });
+    </script>
+</body>
+</html>

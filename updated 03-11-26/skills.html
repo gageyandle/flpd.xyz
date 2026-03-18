@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills — flpd.xyz</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="mesh">
+    <div class="mesh-blob blob1"></div>
+    <div class="mesh-blob blob2"></div>
+    <div class="mesh-blob blob3"></div>
+  </div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">flpd.xyz</a>
+    <ul class="nav-links">
+      <li><a href="skills.html" class="active">Skills</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="page-tag teal">⟡ Skills</div>
+    <h1>What I <span class="grad-teal">know.</span></h1>
+    <p class="subtitle">Languages and technologies I've worked with, along with my current proficiency in each.</p>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-name">HTML / CSS</div>
+          <div class="skill-badge badge-advanced">Advanced</div>
+        </div>
+        <div class="skill-desc">Web fundamentals I use to build responsive, visually polished interfaces.</div>
+        <div class="progress-bar"><div class="progress prog-advanced" data-width="80%"></div></div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-badge badge-beginner">Beginner</div>
+        </div>
+        <div class="skill-desc">Client-side scripting for interactive elements and dynamic content.</div>
+        <div class="progress-bar"><div class="progress prog-beginner" data-width="40%"></div></div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-name">Python</div>
+          <div class="skill-badge badge-intermediate">Intermediate</div>
+        </div>
+        <div class="skill-desc">Versatile language I use for automation, data analysis, and general scripting.</div>
+        <div class="progress-bar"><div class="progress prog-intermediate" data-width="65%"></div></div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-name">Java</div>
+          <div class="skill-badge badge-beginner">Beginner</div>
+        </div>
+        <div class="skill-desc">Object-oriented language for building robust, platform-independent apps.</div>
+        <div class="progress-bar"><div class="progress prog-beginner" data-width="40%"></div></div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-name">SQL</div>
+          <div class="skill-badge badge-beginner">Beginner</div>
+        </div>
+        <div class="skill-desc">Database query language for managing and analyzing relational data.</div>
+        <div class="progress-bar"><div class="progress prog-beginner" data-width="40%"></div></div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-name">React</div>
+          <div class="skill-badge badge-beginner">Beginner</div>
+        </div>
+        <div class="skill-desc">JavaScript library for building component-driven user interfaces.</div>
+        <div class="progress-bar"><div class="progress prog-beginner" data-width="40%"></div></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>flpd.xyz 2026</footer>
+
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.querySelectorAll('.progress').forEach(bar => {
+          bar.style.width = bar.dataset.width;
+        });
+      }, 300);
+    });
+  </script>
+</body>
+</html>

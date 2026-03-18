@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 300;
+  font-style: normal;
+  /* Background image */
+  background-image: url('../images/bg.jpg');   /* bg image by "temp" on unsplash*/
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* Light blue to purple gradient background */
+  /* background: linear-gradient(17deg, #211758 0%, #ffffff 25%, #177c28 50%, #000000 75%, #070536 100%); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;  
+  margin: 0;
+  padding: 1rem;
+}
+.container {
+  background-color: rgba(19, 20, 19, 0.13);
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(63, 63, 63, 0.1);
+  text-align: center;
+  margin-bottom: 1.25rem;
+  backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(95, 95, 95, 0.2);
+  width: 90%;
+  max-width: 600px;
+}
+h1 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+p {
+  color: #e4e4e4;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.soundcloud-class, .discord-class {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(182, 182, 182, 0.1);
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0.5rem;
+  font-size: 0.9rem;
+  /* Enhanced visibility */
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+/* Hover effects with glow */
+.soundcloud-class:hover, .discord-class:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  box-shadow: 
+    0 4px 15px rgba(255, 255, 255, 0.2),
+    0 0 20px rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.toggle-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(92, 92, 92, 0.15);
+  padding: 0.625rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+.toggle-container button {
+  background-color: #919191;
+  color: #f0f0f0;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+.toggle-container button:hover {
+  background-color: #222222;
+  color: #333;
+}
+.dark-mode .toggle-container {
+  background-color: rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.dark-mode {
+  background-color: rgba(179, 54, 54, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(122, 118, 118, 0.05);
+}
+.dark-mode .container {
+  background-color: #858585;
+  color: #f0f0f0;
+}
+.dark-mode .soundcloud-class,
+.dark-mode .discord-class {
+  background-color: rgba(107, 107, 107, 0.8);
+  color: #ffffff;
+  border: 1px solid rgba(200, 200, 200, 0.3);
+}
+
+/* Dark mode hover effects */
+.dark-mode .soundcloud-class:hover,
+.dark-mode .discord-class:hover {
+  background-color: rgba(150, 150, 150, 0.9);
+  color: #ffffff;
+  box-shadow: 
+    0 4px 15px rgba(200, 200, 200, 0.2),
+    0 0 20px rgba(200, 200, 200, 0.3),
+    0 0 30px rgba(200, 200, 200, 0.1);
+  border: 1px solid rgba(200, 200, 200, 0.5);
+  transform: translateY(-2px);
+}
+
+.dark-mode h1, .dark-mode p {
+  color: #f0f0f0;
+}
+.dark-mode .github-class:hover {
+  background-color: #333;
+  color: #f0f0f0;
+}
+.copyright {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  color: #ffffff;
+  font-size: 0.75rem;
+  transition: color 0.3s ease;
+}
+.dark-mode .copyright {
+  color: #f0f0f0;
+}
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 1rem;
+  }
+ 
+  h1 {
+    font-size: 1.5rem;
+  }
+ 
+  p {
+    font-size: 0.9rem;
+  }
+ 
+  .soundcloud-class, .discord-class {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    margin: 0.3rem;
+  }
+ 
+  .toggle-container {
+    top: 5px;
+    right: 5px;
+    padding: 0.4rem;
+  }
+ 
+  .toggle-container button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    padding: 0.5rem;
+  }
+ 
+  .container {
+    width: 100%;
+    padding: 0.8rem;
+  }
+ 
+  h1 {
+    font-size: 1.3rem;
+  }
+ 
+  p {
+    font-size: 0.8rem;
+  }
+ 
+  .copyright {
+    font-size: 0.7rem;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+}
+/* For devices in landscape orientation */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  body {
+    justify-content: flex-start;
+    padding-top: 3rem;
+  }
+ 
+  .container {
+    margin-bottom: 0.5rem;
+  }
+ 
+  .copyright {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 0.5rem;
+    text-align: center;
+    width: 100%;
+  }
+}

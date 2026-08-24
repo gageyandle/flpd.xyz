@@ -27,7 +27,7 @@ All backup snapshots live under `snapshots/`:
 
 | Folder | Date |
 |---|---|
-| `snapshots/web/` | very early version (particles.js era) |
+| `snapshots/web/` | very early version |
 | `snapshots/updated 11_18_24/` | Nov 18, 2024 |
 | `snapshots/updated 12_9_24/` | Dec 9, 2024 |
 | `snapshots/updated 12_11_24/` | Dec 11, 2024 |
